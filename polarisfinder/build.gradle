@@ -72,18 +72,18 @@ dependencies {
 	//compile('org.springframework.social:spring-social-linkedin')
 	compile('org.springframework.social:spring-social-google:1.0.0.RELEASE')
 	
-	compile('org.hyperledger.fabric-sdk-java:fabric-sdk-java:1.1.0-SNAPSHOT')
+	compile('org.hyperledger.fabric-sdk-java:fabric-sdk-java:1.1.0')
 	//Donot use files to get dependency in direct maven jar file name, Using Maven Project Artifacts.
-	compile files('libs/fabric-sdk-java-1.1.0-SNAPSHOT.jar')
+	//compile files('libs/fabric-sdk-java-1.1.0-SNAPSHOT.jar')
 	
 	compile('org.springframework.boot:spring-boot-starter-test')
 	compile('org.springframework.security:spring-security-test')
 	compile('junit:junit')
 	compile('org.hsqldb:hsqldb')
 	
-    testCompile('org.hyperledger.fabric-sdk-java:fabric-sdk-java:1.1.0-SNAPSHOT')
+    testCompile('org.hyperledger.fabric-sdk-java:fabric-sdk-java:1.1.0')
 	//Donot use files to get dependency in direct maven jar file name, Using Maven Project Artifacts.
-	testCompile files('libs/fabric-sdk-java-1.1.0-SNAPSHOT.jar')
+	//testCompile files('libs/fabric-sdk-java-1.1.0-SNAPSHOT.jar')
 	
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')
@@ -94,10 +94,13 @@ dependencies {
     //compile('org.springframework.cloud:spring-cloud-starter-oauth2')
 	//compile("org.springframework.cloud:spring-cloud-security:1.1.3.RELEASE")
 	
-	//compile files('libs/opencv-320.jar')
-    //compile fileTree(dir: 'libs', include: '*.jar')
-    compile fileTree(dir: 'libs', include: '*.*')
-    testCompile fileTree(dir: 'libs', include: '*.*')
+	compile files('libs/fabric-sdk-java-1.0.0.jar')
+    compile files('libs/opencv-320.jar')
+    compile fileTree(dir: 'libs', include: '*.jar')
+    //compile fileTree(dir: 'libs', include: '*.*')
+    testCompile files('libs/fabric-sdk-java-1.0.0.jar')
+    testCompile files('libs/opencv-320.jar')
+    testCompile fileTree(dir: 'libs', include: '*.jar')
     
     
     
